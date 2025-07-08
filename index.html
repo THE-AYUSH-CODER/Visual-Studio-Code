@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.7.2/css/all.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism-themes/1.9.0/prism-material-dark.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.0/jszip.min.js"></script>
+  </head>
+  <body>
+    <div class="topbar">
+      <div>
+        <ul>
+          <li><img src="images/vs-code.png" /></li>
+          <li>File</li>
+          <li>Edit</li>
+          <li>Selection</li>
+          <li>View</li>
+          <li>Go</li>
+          <li>Run</li>
+          <li>Terminal</li>
+          <li>Help</li>
+        </ul>
+      </div>
+      <div id="file-path">
+        index.html - New Folder - Visual Studio Code [Administrator]
+      </div>
+      <div>
+        <ul>
+          <li><i class="fa-solid fa-table-columns"></i></li>
+          <li><i class="fa-light fa-table-layout"></i></li>
+          <li><i class="fa-light fa-objects-column"></i></li>
+          <li><i class="fa-solid fa-sidebar-flip"></i></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="filebar">
+      <div>
+        <ul>
+          <li class="active" id="html">
+            <img src="images/html.png" />index.html
+          </li>
+          <li class="lang" id="css"><img src="images/css.png" />style.css</li>
+          <li class="lang" id="js"><img src="images/js.png" />script.js</li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li id="saveBtn"><i class="fa-regular fa-floppy-disk"></i></li>
+          <li id="clearBtn"><i class="fa-regular fa-trash"></i></li>
+          <li id="copyBtn"><i class="fa-regular fa-copy"></i></li>
+          <li id="downloadBtn">
+            <i class="fa-regular fa-file-arrow-down"></i>
+          </li>
+          <li id="downloadAll"><i class="fa-regular fa-folder-arrow-down"></i></li>
+          <li><i class="fa-regular fa-columns-3"></i></li>
+          <li><i class="fa-regular fa-ellipsis"></i></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="html-code-editor" class="code-editor">
+      <pre id="lineNumbers">1</pre>
+      <textarea class="editor" id="htmlCode" spellcheck="false"> </textarea>
+      <pre><code class="preview" id="languageHtml"></code></pre>
+    </div>
+
+    <div id="css-code-editor" class="code-editor">
+      <pre id="lineNumbers2">1</pre>
+      <textarea class="editor" id="cssCode" spellcheck="false"> </textarea>
+      <pre><code class="preview" id="languageCss"></code></pre>
+    </div>
+
+    <div id="js-code-editor" class="code-editor">
+      <pre id="lineNumbers3">1</pre>
+      <textarea class="editor" id="jsCode" spellcheck="false"> </textarea>
+      <pre><code class="preview" id="languageJs"></code></pre>
+    </div>
+    <!-- <iframe id="outputArea"></iframe> -->
+
+    <div class="sidebar">
+      <div>
+        <ul>
+          <li><i class="fa-light fa-files"></i></li>
+          <li><i class="fa-light fa-magnifying-glass"></i></li>
+          <li><i class="fa-light fa-code-branch"></i></li>
+          <li><i class="fa-light fa-play"></i></li>
+          <li><i class="fa-light fa-grid-2"></i></li>
+          <li><i class="fa-brands fa-github"></i></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><i class="fa-light fa-circle-user"></i></li>
+          <li><i class="fa-light fa-gear"></i></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bottombar">
+      <div>
+        <ul>
+          <li>
+            <i class="fa-solid fa-chevron-right"></i>
+            <sup><i class="fa-solid fa-chevron-left"></i></sup>
+          </li>
+          <li><i class="fa-light fa-circle-xmark"></i> <span>0</span></li>
+          <li><i class="fa-light fa-circle-exclamation"></i> <span>0</span></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li id="line">Ln 0</li>
+          <li id="col">Col 0</li>
+          <li id="spaces">Spaces: 0</li>
+          <li>UTF-8</li>
+          <li>CRLF</li>
+          <li id="file-name">HTML</li>
+          <li id="goLive" onclick="showOutput();">
+            <i class="fa-regular fa-signal-stream"></i> <span>Go Live</span>
+          </li>
+          <li id="port" style="display: none">
+            <i class="fa-light fa-ban"></i> <span>Port : 5500</span>
+          </li>
+          <li><i class="fa-light fa-chalkboard-user"></i></li>
+          <li><i class="fa-light fa-bell"></i></li>
+        </ul>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

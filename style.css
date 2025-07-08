@@ -1,0 +1,275 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+ul li {
+  list-style: none;
+}
+
+.topbar {
+  width: 100%;
+  height: 4.5%;
+  color: lightgray;
+  background-color: #3c3c3c;
+  display: flex;
+  align-items: center;
+  gap: 10%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topbar div {
+  font-size: 13px;
+}
+
+.topbar div ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.topbar div ul li img {
+  width: 18px;
+  margin: 2.5px 0 0 15px;
+}
+
+.topbar div:nth-child(3) {
+  position: absolute;
+  right: 1.5%;
+}
+
+.filebar {
+  width: calc(100% - 3.5%);
+  height: 5%;
+  background-color: #2d2d2d;
+  margin-left: 3.5%;
+  color: #999999;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.active {
+  background-color: #252526;
+}
+
+.lang {
+  background-color: #3c3c3c80;
+}
+
+.filebar div ul {
+  display: flex;
+  align-items: center;
+}
+
+.filebar div:nth-child(1) ul li {
+  display: flex;
+  align-items: center;
+  padding: 7.5px 30px 7.6px 10px;
+  gap: 5px;
+}
+
+.filebar div:nth-child(1) ul li span {
+  margin-left: 20%;
+}
+
+.filebar div:nth-child(2) ul li {
+  display: flex;
+  align-items: center;
+  padding: 5px 20px 5px 0;
+  font-size: 15px;
+}
+
+.filebar div ul li img {
+  width: 13px;
+}
+
+.sidebar {
+  width: 3.5%;
+  height: 92%;
+  color: #999999;
+  background-color: #333333;
+  position: absolute;
+  top: 4.5%;
+  font-size: 22px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.sidebar div:nth-child(1) ul li {
+  margin-bottom: 20px;
+}
+
+.sidebar div:nth-child(2) ul li {
+  margin-top: 20px;
+}
+
+.bottombar {
+  width: 100%;
+  height: 3.5%;
+  font-size: 13px;
+  background-color: #2b7ccc;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 14px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bottombar div ul {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.bottombar div ul li {
+  padding-top: 2px;
+  color: #ffffff;
+}
+
+.bottombar div:nth-child(1) ul li:nth-child(1) {
+  width: 3.5vw;
+  padding: 4.5px 0 2.5px;
+  height: 3.5vh;
+  background-color: #32815d;
+  margin-left: -15px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.bottombar div:nth-child(1) ul li:nth-child(1) sup {
+  margin-left: -2px;
+  font-size: 10px;
+}
+
+.bottombar div ul li span {
+  font-size: 12px;
+}
+
+/* Code Editor */
+
+.code-editor {
+  margin-left: 3.5%;
+  position: relative;
+  top: 0;
+  left: 0;
+  /* width: calc(50 / 100 * 96.75%); */
+  width: 96.5%;
+  height: 87%;
+}
+
+/* iframe {
+  position: absolute;
+  top: 9.5%;
+  right: 0;
+  width: calc(50 / 100 * 96.75%);
+  height: 87%;
+} */
+
+#html-code-editor {
+  transform: translateY(0%);
+  z-index: 3;
+}
+
+#css-code-editor {
+  transform: translateY(-100%);
+  z-index: 2;
+}
+
+#js-code-editor {
+  transform: translateY(-200%);
+  z-index: 1;
+}
+
+textarea {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background-color: transparent;
+  color: transparent;
+  font-size: 1rem;
+  padding: 1% 4%;
+  line-height: 1.5;
+  caret-color: #9a75ff;
+  border: none;
+  resize: none;
+}
+
+pre {
+  height: 100%;
+  width: 100%;
+  padding: 1% 4%;
+  line-height: 1.5;
+  width: 100%;
+  height: 100%;
+  font-size: 1rem;
+  background-color: #252526 !important;
+  color: #c8c8c8;
+  overflow-y: scroll;
+}
+
+textarea:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+code,
+pre,
+textarea {
+  white-space: pre-wrap !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #252526;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+#lineNumbers,
+#lineNumbers2,
+#lineNumbers3 {
+  width: fit-content;
+  font-size: 1rem;
+  padding: 1% 0 2% 1%;
+  text-align: right;
+  user-select: none;
+  color: gray;
+  background-color: transparent;
+  font-family: monospace;
+  line-height: 1.5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+::selection {
+  background: #ffffff1a;
+}
